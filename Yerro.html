@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Yerro.css">
+    <title>Yerro - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #bg-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(5px);
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <div class="blur"></div>
+        <video id="bg-video" autoplay muted playsinline></video>
+    </div>
+    <header>
+        <nav>
+            <a href="main.html">Home</a>
+            <a href="Almadra.html">Almadra</a>
+            <a href="Yerro.html">Yerro</a>
+            <a href="Sardido.html">Sardido</a>
+            <a href="Maglipon.html">Maglipon</a>
+        </nav>
+        <nav class="icons">
+            <a href="https://www.tiktok.com/@magnanimous.mp4/video/7464747893522451730">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://www.youtube.com/@Nodulated">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            
+        </nav>
+    </header>
+    <article style="display: flex;">
+        <div class="headline">
+            <h1 style="font-family: Stretch-Pro;  font-variant-ligatures: none; color: white; text-shadow: 3px 2px 7px rgba(0,0,0,0.6);">
+            Gamer, Student, Editor,
+            <br>
+            Content Creator, Aspiring Developer.
+            </h1>
+            <br>
+            <a class="learn-btn" href="#about-me">Learn More.</a>
+        </div>
+        <div class="info">
+            <ul>
+                <li>10k+ Followers</li>
+                <li>1M+ Likes</li>
+            </ul>
+        </div>
+        <div id="about-me">
+            <h1>Hi, My name is Lance Simon R. Yerro</h1>
+            <p>a gamer, student, and aspiring developer.  
+      I enjoy exploring technology, creating content, and learning new skills that help me grow both personally and academically.  
+      My interests range from coding and digital arts to video editing and gaming, and I’m always curious to try new things.  </p>
+        </div>
+        <div id="my-videos">
+        <h1>My Videos</h1>
+        <ul>
+            <li>
+            <a href="https://www.tiktok.com/@magnanimous.mp4/video/7489444105760640257" target="_blank">
+                <img src="images/1.png" alt="Video 1 Thumbnail">
+            </a>
+            </li>
+            <li>
+            <a href="https://www.tiktok.com/@magnanimous.mp4/video/7471669625894259986" target="_blank">
+                <img src="images/2.png" alt="Video 2 Thumbnail">
+            </a>
+            </li>
+            <li>
+            <a href="https://www.tiktok.com/@magnanimous.mp4/video/7464747893522451730" target="_blank">
+                <img src="images/3.png" alt="Video 3 Thumbnail">
+            </a>
+            </li>
+        </ul>
+        </div>
+    </article>
+    <footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <h2>Yerro</h2>
+            <p>Gamer • Student • Developer</p>
+        </div>
+        <div class="footer-center">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="footer-right">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <a href="https://www.youtube.com/@Nodulated" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com/@magnanimous.mp4" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+        </div>
+    </div>
+    </footer>
+    <script>
+        const videos = [
+            "videos/Biney 2 Final.mp4",
+            "videos/Dark Red.mp4",
+            "videos/idk.mp4",
+            "videos/Nope you're too late i already died.mp4",
+            "videos/Nuts Final.mp4",
+            "videos/Rita Edit Final(1).mp4",
+            "videos/Sad Biney 2(1).mp4"
+        ];
+
+        const videoElement = document.getElementById("bg-video");
+        let current = 0;
+
+        videoElement.src = videos[current];
+        videoElement.play();
+
+        videoElement.addEventListener("ended", () => {
+            current = (current + 1) % videos.length;
+            videoElement.src = videos[current];
+            videoElement.play();
+        });
+    </script>
+</body>
+</html>
