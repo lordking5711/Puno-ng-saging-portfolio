@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: #333;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background-color: #f5f5f5;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li {
+      display: inline;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 50px;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .intro {
+      max-width: 500px;
+    }
+    .intro h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    .intro p, .intro ul {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .intro ul {
+      margin: 10px 0 20px 20px;
+    }
+    .profile-pic {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @media (max-width: 768px) {
+      .profile-pic {
+        width: 180px;
+        height: 180px;
+      }
+      .intro h1 {
+        font-size: 28px;
+      }
+      .intro p, .intro ul {
+        font-size: 16px;
+      }
+    }
+    @media (max-width: 480px) {
+      .profile-pic {
+        width: 140px;
+        height: 140px;
+      }
+      .intro h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">MyPortfolio</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="profile-pic">
+      <img src="haru urara .jpg" alt="My Photo">
+    </div>
+    <div class="intro">
+      <h1 style="color: darkred;">Hi! My name is Almadra, Don Michael O.</h1>
+      <h2>About Me</h2>
+      <p>I'm not good at everything but even I lose, Im gonna give my everything.</p>
+      <h2>My Hobbies</h2>
+      <ul>
+        <li>Playing mobile games</li>
+        <li>Playing volleyball</li>
+        <li> Reading</li>
+      </ul>
+      <h2>My Skills</h2>
+      <ul>
+        <li>Making the study hour an addiction</li>
+        <li>Hardworking but wise</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
