@@ -50,6 +50,10 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
+.title span {
+  font-size: 42px;
+}
+
 header p {
   color: #27ae60; 
   font-style: italic; 
@@ -89,32 +93,12 @@ header p {
   border-radius: 5px;
 }
 
-#members {
-  margin: 40px 10%;
-  text-align: right;
-  font-family: 'Verdana', sans-serif;
-  color: #34495e;
-}
 
-#members h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 28px;
-  text-transform: uppercase; 
-  letter-spacing: 2px;
-  color: #2c3e50;
-}
-
-#members .cards-container {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-}
 
 .card {
   border: 1px solid #ccc;
   background-color: #fff;
+  margin: auto;
   border-radius: 12px;
   width: 280px;
   padding: 20px;
@@ -174,12 +158,14 @@ footer p {
     text-align: center !important;
   }
 
-  #members .cards-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .card {
     width: 90%;
   }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
